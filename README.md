@@ -1,4 +1,4 @@
-# ¡A jugar! 
+# ¡A jugar!
 
 ## Juego realizado con la biblioteca Wollok Game
 
@@ -6,19 +6,19 @@
 
 ### Resumen:
 
+La clásica **Batalla Naval**, ahora en Wollok. ¡Hunde los barcos enemigos y mantén los tuyos a flote para conseguir la victoria!
 
 ### Instrucciones:
 
 
 ### Acerca de:
 
-Autores:
+Autores: Adrián Bielsa, Lucio Calosso Cístola y Tomás Sanchez.
 
-Docente/Curso/Institución:
+Docente/Curso/Institución: Lucas Spigariol - Paradigmas de Programación - UTN FRD.
 
 Versión de wollok:
 
 Fecha:
 
 [Guía de herramientas](https://www.wollok.org/documentacion/conceptos/)
-
