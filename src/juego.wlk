@@ -40,6 +40,7 @@ object juego {
 
 object jugador {
     var property flota
+    var property celdas_atacadas
 
     method colocarBarcos() {
 
@@ -56,6 +57,7 @@ object jugador {
 
 object oponente {
     var property flota
+    var property celdas_atacadas
 
     method colocarBarcos() {
 
