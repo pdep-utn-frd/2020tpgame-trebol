@@ -11,6 +11,8 @@ object juego {
     method iniciar() {
         self.prepararWollokGame()
         self.prepararJugadores()
+
+        self.iniciarCombate()
     }
 
     method prepararWollokGame() {
@@ -30,6 +32,10 @@ object juego {
         jugador.colocarBarcos()
         oponente.colocarBarcos()
     }
+
+    method iniciarCombate() {
+
+    }
 }
 
 object jugador {
@@ -42,6 +48,10 @@ object jugador {
     method atacar() {
 
     }
+
+    method recibirAtaqueEnPosicion() {
+
+    }
 }
 
 object oponente {
@@ -52,6 +62,10 @@ object oponente {
     }
 
     method atacar() {
+
+    }
+
+    method recibirAtaqueEnPosicion() {
 
     }
 }
