@@ -38,6 +38,9 @@ object juego {
     }
 }
 
+// TODO: Considerar la utilización de herencia en los objetos "jugador" y "oponente".
+// TODO: Quizás es más conveniente usar un Issue para esta clase de comentarios =).
+
 object jugador {
     var property flota
     var property celdas_atacadas
