@@ -28,7 +28,7 @@ object juego {
         game.start()
     }
 
-    method prepararWollokGame() {
+    method prepararJugadores() {
         jugador.colocarBarcos()
         oponente.colocarBarcos()
     }
