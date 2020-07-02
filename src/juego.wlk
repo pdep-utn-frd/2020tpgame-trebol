@@ -115,21 +115,40 @@ object player {
     method tryToAttackShip() {
     	enemy.navy().forEach({ s => self.tryToAttackShip(s) })
     }
+    
+    method tryToAttackShip(ship) {
+    	if (selector.position() == ship.position()) {
+    		ship.sink()
+    	}
+    }
 }
 
-object oponente {
-    var property flota
-    var property celdas_atacadas
-
-    method colocarBarcos() {
-
-    }
-
-    method atacar() {
-
-    }
-
-    method recibirAtaqueEnPosicion() {
-
-    }
+object enemy {
+	const m_navy = []
+	
+	method navy() {
+		return m_navy
+	}
+	
+	method setup() {
+		self.tryToPlaceShip()
+	}
+	
+	method tryToPlaceShip() {
+		if (m_navy.size() < 5) {
+			// TODO: Check upper and lower limits.
+    		// TODO: Check if there's already a ship in the
+    		// selector's position.
+    		
+    		// Create and place the ship in the game.
+    		const ship = new Ship()
+    		ship.place(game.at(0.randomUpTo(11), 0.randomUpTo(10)))
+    		
+    		m_navy.add(ship)
+    		
+    		// TODO: Not sure if the teacher is gonna like this;
+    		// find more information about ranges.
+    		self.tryToPlaceShip()
+		}
+	}
 }
