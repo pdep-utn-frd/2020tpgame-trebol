@@ -84,20 +84,36 @@ object app {
 // TODO: Considerar la utilización de herencia en los objetos "jugador" y "oponente".
 // TODO: Quizás es más conveniente usar un Issue para esta clase de comentarios =).
 
-object jugador {
-    var property flota
-    var property celdas_atacadas
-
-    method colocarBarcos() {
-
+object player {
+    const m_navy = []
+    
+    method navy() {
+    	return m_navy
     }
 
-    method atacar() {
+	method setup() {
+		keyboard.enter().onPressDo({self.tryToPlaceShip()})
+    	keyboard.space().onPressDo({self.tryToAttackShip()})
+    }		
 
+    method tryToPlaceShip() {
+    	if (m_navy.size() < 5) {
+    		// TODO: Check upper and lower limits.
+    		// TODO: Check if there's already a ship in the
+    		// selector's position.
+    		
+    		// Create and place the ship in the game.
+    		const ship = new Ship()
+    		ship.place(selector.position())
+    		
+    		m_navy.add(ship)
+    	} else {
+    		game.say(selector, "Ya colocaste todos tus barcos.")
+    	}
     }
 
-    method recibirAtaqueEnPosicion() {
-
+    method tryToAttackShip() {
+    	enemy.navy().forEach({ s => self.tryToAttackShip(s) })
     }
 }
 
