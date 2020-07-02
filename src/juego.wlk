@@ -26,7 +26,7 @@ class Ship {
 }
 
 // Used to select positions to place a new ship or
-// attack one(if any).
+// attack one (if any).
 object selector {
 	var m_position = game.center()
 	
@@ -142,7 +142,7 @@ object enemy {
     		
     		// Create and place the ship in the game.
     		const ship = new Ship()
-    		ship.place(game.at(0.randomUpTo(11), 0.randomUpTo(10)))
+    		ship.place(game.at(0.randomUpTo(11).truncate(0), 0.randomUpTo(10).truncate(0)))
     		
     		m_navy.add(ship)
     		
