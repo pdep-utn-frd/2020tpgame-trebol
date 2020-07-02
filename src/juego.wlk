@@ -93,7 +93,7 @@ object player {
 
 	method setup() {
 		keyboard.enter().onPressDo({self.tryToPlaceShip()})
-    	keyboard.space().onPressDo({self.tryToAttackShip()})
+		keyboard.space().onPressDo({self.tryToAttackShip()})
     }		
 
     method tryToPlaceShip() {
