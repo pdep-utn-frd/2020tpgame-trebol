@@ -1,10 +1,28 @@
 import wollok.game.*
 
-class Barco {
-    const property position
-
-    // TODO: Luego.
-    // const image = "barco.png"
+class Ship {
+    var m_position
+    var m_image
+    
+    method position() {
+    	return m_position
+    }
+    
+    method image() {
+    	return m_image	
+    }
+    
+    method place(where) {
+    	m_position = where	
+    	m_image = "assets/barco.png"
+    
+    	// TODO: Should we call this outside the class?	
+    	game.addVisual(self)
+    }
+    
+    method sink() {
+    	m_image = "assets/barco_hundido.png"
+    }
 }
 
 object juego {
