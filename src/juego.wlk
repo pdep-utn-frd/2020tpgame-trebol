@@ -26,7 +26,7 @@ class Ship {
 }
 
 // Used to select positions to place a new ship or
-// attack one (if any).
+// attack one(if any).
 object selector {
 	var m_position = game.center()
 	
