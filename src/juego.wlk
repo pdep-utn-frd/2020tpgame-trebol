@@ -25,34 +25,59 @@ class Ship {
     }
 }
 
-object juego {
-    method iniciar() {
-        self.prepararWollokGame()
-        self.prepararJugadores()
+// Used to select positions to place a new ship or
+// attack one (if any).
+object selector {
+	var m_position = game.center()
+	
+	method position() {
+		return m_position
+	}
+	
+	method position(new_position) {
+		m_position = new_position
+	}
+	
+	method image() {
+		return "assets/casilla.png"
+	}
+}
 
-        self.iniciarCombate()
+object app {
+	var m_stage
+	
+	method maximumNavyCapacity() {
+		return 5
+	}
+	
+	method stage() {
+		return m_stage
+	}
+	
+	method stage(new_stage) {
+		m_stage = new_stage
+	}
+	
+    method start() {
+        self.setupWollokGame()
+        self.setupPlayers()
     }
 
-    method prepararWollokGame() {
-        // Cantidad de celdas. Usamos una extra en el ancho que usaremos para seleccionar
-        // los barcos a colocar.
+    method setupWollokGame() {
+    	// Grid size (in number of cells).
         game.width(11)
         game.height(10)
 
-        // Título de la ventana.
         game.title("Batalla naval")
 
-        // Abrimos la ventana del juego.
         game.start()
+        
+        game.addVisualCharacter(selector)
     }
 
-    method prepararJugadores() {
-        jugador.colocarBarcos()
-        oponente.colocarBarcos()
-    }
-
-    method iniciarCombate() {
-
+    method setupPlayers() {
+        enemy.setup()
+        player.setup()
     }
 }
 
