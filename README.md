@@ -9,9 +9,10 @@
 La clásica **Batalla Naval**, ahora en Wollok. ¡Hunde los barcos enemigos y mantén los tuyos a flote para conseguir la victoria!
 
 ### Instrucciones:
-Demuestra tus dotes de estratega contra la computadora
-Seleccione ENTER para colocar los barcos
-Seleccione SPACE para atacar
+Demuestra tus dotes de estratega contra la computadora.
+
+- Presiona ENTER para colocar tus barcos.
+- Presiona SPACE para atacar los barcos enemigos.
 
 ### Acerca de:
 
