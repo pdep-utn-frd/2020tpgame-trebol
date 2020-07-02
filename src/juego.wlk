@@ -137,7 +137,7 @@ object enemy {
 	method tryToPlaceShip() {
 		if (m_navy.size() < 5) {
 			// TODO: Check upper and lower limits.
-    		// TODO: Check if there's already a ship in the
+			// TODO: Check if there's already a ship in the
     		// selector's position.
     		
     		// Create and place the ship in the game.
@@ -148,7 +148,7 @@ object enemy {
     		
     		// TODO: Not sure if the teacher is gonna like this;
     		// find more information about ranges.
-    		self.tryToPlaceShip()
+			self.tryToPlaceShip()
 		}
 	}
 }
