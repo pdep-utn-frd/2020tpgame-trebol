@@ -22,6 +22,10 @@ class Ship {
     
     method sink() {
     	m_image = "assets/barco_hundido.png"
+    	
+    	game.removeVisual(self)
+    	game.addVisual(self)
+    	game.say(self, "Me hundieron.")
     }
 }
 
