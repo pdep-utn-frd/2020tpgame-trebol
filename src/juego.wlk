@@ -145,7 +145,7 @@ object enemy {
 	
 	method tryToPlaceShip() {
 		if (m_navy.size() < 5) {
-			// TODO: Check upper and lower limits.
+            // TODO: Check upper and lower limits.
 			// TODO: Check if there's already a ship in the
     		// selector's position.
     		
