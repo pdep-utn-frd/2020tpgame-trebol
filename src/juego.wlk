@@ -1,5 +1,8 @@
 import wollok.game.*
 
+/* `Ship` objects are the game's main entity. They are placed across the grid
+   by both sides (player and computer) at the start of the match. Then, they
+   may or may not be sunk on a given turn. */
 class Ship {
     var m_position
     var m_image
@@ -29,8 +32,9 @@ class Ship {
     }
 }
 
-// Used to select positions to place a new ship or
-// attack one (if any).
+/* The `selector` object is controlled by the player. It is used
+   to move across the grid, representing the current cell being
+   selected. It can be used to place or attack ships. */
 object selector {
 	var m_position = game.center()
 	
@@ -47,6 +51,7 @@ object selector {
 	}
 }
 
+/* The core object. This is where the game begins. */
 object app {
 	var m_stage
 	
