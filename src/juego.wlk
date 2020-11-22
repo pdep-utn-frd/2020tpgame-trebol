@@ -5,7 +5,7 @@ import wollok.game.*
    may or may not be sunk on a given turn. */
 class Ship {
     var m_position
-    var m_image
+    var m_image = "assets/barco.png"
     
     method position() {
     	return m_position
@@ -15,11 +15,8 @@ class Ship {
     	return m_image	
     }
     
-    method place(where) {
-    	m_position = where	
-    	m_image = "assets/barco.png"
-    
-    	// TODO: Should we call this outside the class?	
+    method place() {
+      	// TODO: Should we call this outside the class?	
     	game.addVisual(self)
     }
     
@@ -70,6 +67,8 @@ object app {
     method start() {
         self.setupWollokGame()
         self.setupPlayers()
+        game.start()
+        
     }
 
     method setupWollokGame() {
@@ -79,7 +78,6 @@ object app {
 
         game.title("Batalla naval")
 
-        game.start()
         
         game.addVisualCharacter(selector)
     }
@@ -112,8 +110,8 @@ object player {
     		// selector's position.
     		
     		// Create and place the ship in the game.
-    		const ship = new Ship()
-    		ship.place(selector.position())
+    		const ship = new Ship(m_position = selector.position())
+    		ship.place()
     		
     		m_navy.add(ship)
     	} else {
@@ -150,8 +148,8 @@ object enemy {
     		// selector's position.
     		
     		// Create and place the ship in the game.
-    		const ship = new Ship()
-    		ship.place(game.at(0.randomUpTo(11).truncate(0), 0.randomUpTo(10).truncate(0)))
+    		const ship = new Ship(m_position = game.at(0.randomUpTo(11).truncate(0), 0.randomUpTo(10).truncate(0)))
+    		ship.place()
     		
     		m_navy.add(ship)
     		
